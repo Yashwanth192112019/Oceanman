@@ -1,32 +1,25 @@
-#include <iostream>
-#include<cmath>
-using namespace std;
-int
-main ()
-{
-  int rangenumber, c = 0, num = 2, i, letest = 0;
-  cout<<"Enter Nth Number:";
-  cin>>rangenumber;
-
-  while (c != rangenumber)
-    {
-      int count = 0;
-
-      for (i = 2; i <= sqrt (num); i++)
-    {
-   if (num % i == 0)
-     {
-       count++;
-       break;
-     }
- }
-      if (count == 0)
- {
-   c++;
-   letest = num;
- }
-      num = num + 1;
-    }
-  cout<<rangenumber<<"th prime number is "<<letest;
-  return 0;
+#include<stdio.h>
+int main(){
+   int n,i;
+   int fact,rem;
+   printf("\nEnter a number : ");
+   scanf("%d",&n);
+   printf("\n");
+   int sum = 0;
+   int temp = n;
+   while(n){
+      i = 1,fact = 1;
+      rem = n % 10;
+      while(i <= rem){
+         fact = fact * i;
+         i++;
+      }
+      sum = sum + fact;
+      n = n / 10;
+   }
+   if(sum == temp)
+      printf("%d is a strong number\n",temp);
+   else
+      printf("%d is not a strong number\n",temp);
+   return 0;
 }
