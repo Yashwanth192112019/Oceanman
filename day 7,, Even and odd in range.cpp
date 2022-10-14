@@ -8,26 +8,33 @@ int main()
     scanf("%d",&num1);  
     printf("Enter the second number for the range: ");
     scanf("%d",&num2); 
-
+	if(num1<=0, num1=num2, num1>>num2){
+ 		printf("invalid");
+}
+else{
     printf("\nDisplay even number between %d and %d are",num1,num2);
 
-    i=num1;
+    i<=num1;
 do{
 r=i%2;
 if(r==0)
 printf("\n%d",i);
  i++;
-}while(i<=num2);
+}while(i<num2);
 
+if(num2<=0){
+printf("invalid");
+}
+else {
 printf("\n\nDisplay odd number between %d and %d are",num1,num2);
-
-i=num1;
+i<=num1;
 do{
 r=i%2;
 if(r==1)
 printf("\n%d",i);
  i++;
-}while(i<=num2);
-getch();
+}while(i<num2);
+}
     return 0;
+}
 }
