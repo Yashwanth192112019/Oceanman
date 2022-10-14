@@ -1,25 +1,23 @@
-#include<stdio.h>
+#include<Stdio.h>
 int main()
 {
-	int d,m,y,i;
+	int d,m,y;
+	printf("Enter date : ");
+	scanf("%d/%d/%d",&d,&m,&y);
+	if(d>31 or d==00)
 	{
-		printf("enter date: ");
-		scanf("%d/%d/%d",&d,&m,&y);
-		i=y;
-		if(d>0 and m>0 and y>0 and i==y and d<32 and m<13)
-		{
-			if(i%4==0)
-			{
-				printf("Leap year ");
-			}
-			else
-			{
-				printf("Not leap year,  ");
-			}
-		}
-		else
-		{
-			printf("invalid");
-		}
+	printf("invalid");
+	}
+	if(m>12)
+	{
+		printf("invalid");
+	}
+	else if(y%4==0)
+	{
+		printf("Leap year\nnext anniversary : %d/%d/%d",d,m,y+1);
+	}
+	else
+	{
+		printf("Not leap year\nprevious anniversary : %d/%d/%d",d,m,y-1);
 	}
 }
